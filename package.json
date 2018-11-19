@@ -5,6 +5,8 @@
   "author": "Thomas Mordoh <thomas.mordoh@gmail.com>",
   "private": true,
   "scripts": {
+	"install": "cd backEnd && npm install",
+	"start": "cd backEnd && npm start",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
