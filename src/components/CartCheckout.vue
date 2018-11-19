@@ -10,7 +10,7 @@
       </li>
       </transition-group>
     </ul>
-    <div v-if="!hasProduct()" class="checkout-message">
+    <div v-if="!hasProduct() && !orderConfirmed" class="checkout-message">
       <h3>Aucun animal n'a été ajouté au panier...</h3>
       <router-link to="./">Cliquer ici pour retourner au menu principal</router-link>
     </div>
@@ -40,6 +40,7 @@ export default {
     return {
       loggedIn: false,
       message: null,
+      orderConfirmed: false
     };
   },
   computed: {
@@ -73,6 +74,7 @@ export default {
         }).then((response) => {
           this.message = response.data.message;
           this.removeAllProducts();
+          this.orderConfirmed = true;
         }).catch((err) => {
           this.message = err.response.data.message;
         });

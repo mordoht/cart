@@ -5,15 +5,15 @@
   "author": "Thomas Mordoh <thomas.mordoh@gmail.com>",
   "private": true,
   "scripts": {
-	"install": "cd backEnd && npm install",
-	"start": "cd backEnd && npm start",
+    "install": "cd backEnd && npm install",
+    "start": "cd backEnd && npm start",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "bootstrap": "4.1.2",
+    "bootstrap": "3.3.7",
     "jwt-decode": "^2.2.0",
     "vue": "^2.5.17",
     "vue-resource": "^1.5.1",
